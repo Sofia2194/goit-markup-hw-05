@@ -543,6 +543,13 @@ img {
   width: 100%;
   height: 100%;
   background: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*!--------------------**/
@@ -562,13 +569,20 @@ img {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .modal-close-btn {
-  stroke: #2e2f42;
+  position: absolute;
+  top: 25px;
+  right: 18px;
+  fill: #2e2f42;
   background-color: #e7e9fc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
+  fill: #ffffff;
   background-color: #404bbf;
-  stroke: #ffffff;
 }
 
 /*!--------------------**/
